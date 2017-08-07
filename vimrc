@@ -26,6 +26,8 @@ NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'scrooloose/nerdtree'
 " file tree git support
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+" comment stuff
+NeoBundle 'scrooloose/nerdcommenter'
 
 " enhanced status bar
 NeoBundle 'vim-airline/vim-airline'
