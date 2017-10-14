@@ -37,8 +37,10 @@ if [[ `hostname` == "Marana" ]] then
 	export TERM=xterm-256color
 	~/.greet.sh
 	alias dps="docker ps"
+	alias dcb="docker-compose build --no-cache"
 	alias dcu="docker-compose up -d"
 	alias dcd="docker-compose down"
+	alias dexec="docker exec -i -t"
 fi
 
 # function for making an image grub compatible
