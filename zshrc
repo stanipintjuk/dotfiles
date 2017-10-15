@@ -20,7 +20,7 @@ compinit
 # End of lines added by compinstall
 
 # linux specific stuff
-if [[ `uname` == "Linux" ]] then
+if [[ `hostname` == "svarog" ]] then
 
 	# manage ethernet connection easily
 	alias ethoff="nmcli dev disconnect iface enp4s0"
@@ -28,6 +28,9 @@ if [[ `uname` == "Linux" ]] then
 
   # search the nixstore
   alias nsgrep="ls /nix/store | grep $@"
+
+  # NixOS is a special snowflake
+  unset GOROOT
 
 elif [[ `uname` == "Darwin" ]] then
 
@@ -55,6 +58,11 @@ if [[ -n ${IN_NIX_SHELL+1} ]] then
   export PS1="[shell: $name]$PS1"
 fi
 
+if [[ -n ${SSH_CONNECTION+1} ]] then
+	export TERM=xterm-256color
+fi
+
+
 #Git aliases
 alias gco="git checkout"
 alias gcm="git commit -m"
@@ -63,3 +71,6 @@ alias gl="git pull"
 alias gp="git push"
 alias gbb="git branch"
 alias ga="git add"
+
+# cheating nix-shell
+alias nix-shell="nix-shell --command zsh"
