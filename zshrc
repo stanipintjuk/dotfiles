@@ -31,6 +31,8 @@ if [[ `hostname` == "svarog" ]] then
 
   # NixOS is a special snowflake
   unset GOROOT
+  # cheating nix-shell
+  alias nix-shell="nix-shell --command zsh"
 
 elif [[ `uname` == "Darwin" ]] then
 
@@ -40,8 +42,10 @@ if [[ `hostname` == "Marana" ]] then
 	export TERM=xterm-256color
 	~/.greet.sh
 	alias dps="docker ps"
+	alias dcb="docker-compose build --no-cache"
 	alias dcu="docker-compose up -d"
 	alias dcd="docker-compose down"
+	alias dexec="docker exec -i -t"
 fi
 
 # function for making an image grub compatible
@@ -71,6 +75,5 @@ alias gl="git pull"
 alias gp="git push"
 alias gbb="git branch"
 alias ga="git add"
+alias gd="git diff"
 
-# cheating nix-shell
-alias nix-shell="nix-shell --command zsh"
