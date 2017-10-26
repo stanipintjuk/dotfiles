@@ -130,6 +130,7 @@ set hlsearch
 
 nnoremap ä :
 let mapleader='ö'
+nmap ; ö
 nnoremap <leader>n :NERDTreeToggle<Return>
 nnoremap <leader>o :NERDTreeFocus<Return>:set relativenumber<Return>
 
