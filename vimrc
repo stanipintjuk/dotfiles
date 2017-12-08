@@ -70,15 +70,15 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'pangloss/vim-javascript'
 
 " typescript autocompletions and more
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'linux' : 'make',
-      \     'unix' : 'gmake',
-      \    },
-      \ }
+" NeoBundle 'Shougo/vimproc.vim', {
+"       \ 'build' : {
+"       \     'windows' : 'tools\\update-dll-mingw',
+"       \     'cygwin' : 'make -f make_cygwin.mak',
+"       \     'mac' : 'make -f make_mac.mak',
+"       \     'linux' : 'make',
+"       \     'unix' : 'gmake',
+"       \    },
+"       \ }
 " I guess that this is a typescript linter?
 NeoBundle 'Quramy/tsuquyomi'
 
@@ -189,6 +189,7 @@ let g:jsx_ext_required = 0
 " Syntastic -----------------------------------
 " to make vimgo work with syntastic
 let g:syntastic_go_checkers = ['golint']
+let g:go_version_warning = 0
 
 
 set statusline+=%#warningmsg#
