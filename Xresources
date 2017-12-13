@@ -25,8 +25,8 @@ URxvt.lineSpace:            0
 ! Fonts
 URxvt.allow_bold:           false
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-!!URxvt.font: xft:Droid Sans Mono for Powerline:size=10:antialias=true
-URxvt.font: xft:Literation Mono Powerline:size=10:antialias=true
+URxvt.font: xft:DejaVuSansMono:size=10:antialias=true
+!!URxvt.font: xft:Mono:size=10:antialias=true
 !!URxvt*font: xft:Monospace:pixelsize=14
 !!URxvt*boldFont: xft:Monospace:pixelsize=14
 

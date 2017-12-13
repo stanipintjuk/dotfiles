@@ -59,8 +59,8 @@ NeoBundle 'oplatek/Conque-Shell'
 " Nix (the package manager)
 " NeoBundle 'MarcWeber/vim-addon-nix'
 
-" Golang stuff
-NeoBundle 'fatih/vim-go'
+" Golang stuff 
+NeoBundle 'fatih/vim-go' "Make sure to run :GoInstallBinaries
 NeoBundle 'nsf/gocode'
 
 " typescript syntax highlighting
@@ -154,6 +154,8 @@ nnoremap gR <c-w>R
 " creating new
 nnoremap gn :split<cr>
 nnoremap gv :vsplit<cr>
+" Go back after 'gd' with gb
+nnoremap <C-o> gb
 
 nnoremap <leader>= mmgg=G`m
 nnoremap cin F(c%()<esc>i
