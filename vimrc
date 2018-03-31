@@ -59,8 +59,8 @@ NeoBundle 'oplatek/Conque-Shell'
 " Nix (the package manager)
 " NeoBundle 'MarcWeber/vim-addon-nix'
 
-" Golang stuff
-NeoBundle 'fatih/vim-go'
+" Golang stuff 
+NeoBundle 'fatih/vim-go' "Make sure to run :GoInstallBinaries
 NeoBundle 'nsf/gocode'
 
 " typescript syntax highlighting
@@ -70,15 +70,15 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'pangloss/vim-javascript'
 
 " typescript autocompletions and more
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'linux' : 'make',
-      \     'unix' : 'gmake',
-      \    },
-      \ }
+" NeoBundle 'Shougo/vimproc.vim', {
+"       \ 'build' : {
+"       \     'windows' : 'tools\\update-dll-mingw',
+"       \     'cygwin' : 'make -f make_cygwin.mak',
+"       \     'mac' : 'make -f make_mac.mak',
+"       \     'linux' : 'make',
+"       \     'unix' : 'gmake',
+"       \    },
+"       \ }
 " I guess that this is a typescript linter?
 NeoBundle 'Quramy/tsuquyomi'
 
@@ -130,6 +130,7 @@ set hlsearch
 
 nnoremap ä :
 let mapleader='ö'
+nmap ; ö
 nnoremap <leader>n :NERDTreeToggle<Return>
 nnoremap <leader>o :NERDTreeFocus<Return>:set relativenumber<Return>
 
@@ -153,6 +154,8 @@ nnoremap gR <c-w>R
 " creating new
 nnoremap gn :split<cr>
 nnoremap gv :vsplit<cr>
+" Go back after 'gd' with gb
+nnoremap <C-o> gb
 
 nnoremap <leader>= mmgg=G`m
 nnoremap cin F(c%()<esc>i
@@ -188,6 +191,7 @@ let g:jsx_ext_required = 0
 " Syntastic -----------------------------------
 " to make vimgo work with syntastic
 let g:syntastic_go_checkers = ['golint']
+let g:go_version_warning = 0
 
 
 set statusline+=%#warningmsg#
