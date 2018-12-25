@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ##
 # Usage:
 # ./create-vm.sh /path/to/live_cd.iso

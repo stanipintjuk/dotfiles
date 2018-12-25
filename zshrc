@@ -77,3 +77,12 @@ alias gbb="git branch"
 alias ga="git add"
 alias gd="git diff"
 
+#alias cargo="rustup run cargo"
+#alias rustc="rustup run rustc"
+
+
+alias cdepi="cd ~/docs/epicert/"
+
+# enable gpg auth for SSH
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
