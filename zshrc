@@ -84,5 +84,6 @@ alias gd="git diff"
 alias cdepi="cd ~/docs/epicert/"
 
 # enable gpg auth for SSH
+# also dont forget this: https://opensource.com/article/19/4/gpg-subkeys-ssh
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
